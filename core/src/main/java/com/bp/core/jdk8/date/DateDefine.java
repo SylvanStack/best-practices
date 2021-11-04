@@ -129,6 +129,11 @@ public class DateDefine {
      * 获取两个时间段相差的时长（天级别）
      */
     public void definePeriod() {
+        /*
+         * Java 8 中有一个专门的类 Period 定义了日期间隔，通过 Period.between 得到了两个 LocalDate 的差，
+         * 返回的是两个日期差几年零几月零几天。如果希望得知两个日期之间差几天，
+         * 直接调用 Period 的 getDays() 方法得到的只是最后的“零几天”，而不是算总的间隔天数
+         */
         Period period = Period.between(LocalDate.of(2021, 11, 1), LocalDate.of(2021, 11, 11));
         System.out.println(period.getDays());
 

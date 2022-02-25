@@ -35,36 +35,6 @@
 - [ ] 实现自定义类加载器
 - [ ] Spring事务的最佳实践
 
-
-
-## Books
-> 个人书单
-
-- [ ] Netty实战
-- [ ] Java8实战
-- [ ] 金字塔原理
-
 ## Java体系
-> 个人Java技术体系
 
-- [ ] Java基础
-  - [ ] 集合
-  - [ ] BIO
-  - [ ] OOP
-- [ ] Java进阶
-  - [ ] NIO
-  - [ ] Netty
-  - [ ] JVM
-  - [ ] 并发
-- [ ] 框架
-  - [ ] Spring
-  - [ ] Spring MVC
-  - [ ] Spring Boot
-  - [ ] Mybatis
-- [ ] SQL
-  - [ ] SQL基础
-  - [ ] 高可用
-- [ ] SOA & 分布式
-  - [ ] 分布式服务化
-  - [ ] 分布式消息
-  - [ ] 分布式缓存
+- [个人Java技术体系](https://www.yuque.com/yu.an/arf180)

@@ -1,14 +1,10 @@
-package com.bp.core.jdk8.lambda;
+package com.bp.core.advance.jdk8.lambda;
 
-import com.google.common.collect.Lists;
 import org.springframework.util.StopWatch;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.FutureTask;
 import java.util.function.IntPredicate;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;

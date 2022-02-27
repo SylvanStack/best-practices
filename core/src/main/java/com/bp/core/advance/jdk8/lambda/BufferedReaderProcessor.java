@@ -1,4 +1,4 @@
-package com.bp.core.jdk8.lambda;
+package com.bp.core.advance.jdk8.lambda;
 
 import java.io.BufferedReader;
 import java.io.IOException;

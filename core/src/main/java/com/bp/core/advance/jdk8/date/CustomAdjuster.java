@@ -1,4 +1,4 @@
-package com.bp.core.jdk8.date;
+package com.bp.core.advance.jdk8.date;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

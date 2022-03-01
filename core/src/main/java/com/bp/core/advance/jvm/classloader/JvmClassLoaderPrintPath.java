@@ -8,9 +8,7 @@ import java.net.URLClassLoader;
 import java.util.ArrayList;
 
 /**
- * @description: 打印类加载器
- * @author: hansiyuan
- * @date: 2021/10/14 8:00 下午
+ * @author hansiyuan
  */
 public class JvmClassLoaderPrintPath {
     public static void main(String[] args) {

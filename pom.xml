@@ -29,6 +29,7 @@
         <fastjson.version>1.2.70</fastjson.version>
         <apache.commons.version>3.9</apache.commons.version>
         <logback.version>1.2.3</logback.version>
+        <knife4j.version>3.0.2</knife4j.version>
     </properties>
 
     <dependencyManagement>
@@ -39,6 +40,11 @@
                 <version>${springboot.parent.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>

@@ -1,18 +1,25 @@
 package com.bp.scaffolding.model.base;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * @description: TODO(这里用一句话描述这个类的作用)
+ * @description: 通用响应数据结构类
  * @author: hansiyuan
  * @date: 2022/2/28 6:55 PM
  */
 @Data
+@ApiModel(value = "通用响应数据结构类")
 public class AjaxResponse {
 
+    @ApiModelProperty(value="请求是否处理成功")
     private boolean isok;  //请求是否处理成功
+    @ApiModelProperty(value="请求响应状态码",example="200、400、500")
     private int code; //请求响应状态码（200、400、500）
+    @ApiModelProperty(value="请求结果描述信息")
     private String message;  //请求结果描述信息
+    @ApiModelProperty(value="请求结果数据")
     private Object data; //请求结果数据（通常用于查询操作）
 
     private AjaxResponse() {

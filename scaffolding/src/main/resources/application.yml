@@ -1,6 +1,9 @@
 server:
   port: 8877
 
+knife4j:
+  enable: true
+
 spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss

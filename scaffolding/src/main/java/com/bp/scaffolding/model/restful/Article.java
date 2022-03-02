@@ -1,8 +1,10 @@
 package com.bp.scaffolding.model.restful;
 
 import com.fasterxml.jackson.annotation.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.List;
@@ -15,6 +17,8 @@ import java.util.List;
 @Data
 @Builder
 @JsonPropertyOrder(value={"content","title"})
+@AllArgsConstructor
+@NoArgsConstructor
 public class Article {
     @JsonIgnore
     private Long  id;

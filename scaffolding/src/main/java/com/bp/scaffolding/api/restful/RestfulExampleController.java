@@ -2,9 +2,11 @@ package com.bp.scaffolding.api.restful;
 
 import com.bp.scaffolding.model.base.AjaxResponse;
 import com.bp.scaffolding.model.restful.Article;
+import com.bp.scaffolding.service.restful.ArticleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.Date;
 
 /**
@@ -17,12 +19,14 @@ import java.util.Date;
 @Slf4j
 public class RestfulExampleController {
 
+    @Resource
+    private ArticleService articleService;
+
     /**
      * 获取一篇Article，使用GET方法,根据id查询一篇文章
      */
     @GetMapping("/articles/{id}")
     public AjaxResponse getArticle(@PathVariable("id") Long id) {
-
         //使用lombok提供的builder构建对象
         Article article = Article.builder()
                 .id(id)
@@ -43,7 +47,8 @@ public class RestfulExampleController {
     public AjaxResponse saveArticle(@RequestBody Article article,
                                     @RequestHeader String header) {
         log.info("saveArticle:" + article);
-        return AjaxResponse.success();
+        String result = articleService.saveArticle(article);
+        return AjaxResponse.success(result);
     }
 
     /**

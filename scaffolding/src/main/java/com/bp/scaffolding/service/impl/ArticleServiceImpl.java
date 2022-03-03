@@ -1,7 +1,7 @@
-package com.bp.scaffolding.service.impl.restful;
+package com.bp.scaffolding.service.impl;
 
-import com.bp.scaffolding.model.restful.Article;
-import com.bp.scaffolding.service.restful.ArticleService;
+import com.bp.scaffolding.domain.model.Article;
+import com.bp.scaffolding.service.ArticleService;
 import org.springframework.stereotype.Service;
 
 /**

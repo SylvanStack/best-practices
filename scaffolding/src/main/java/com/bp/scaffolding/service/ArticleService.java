@@ -1,6 +1,6 @@
-package com.bp.scaffolding.service.restful;
+package com.bp.scaffolding.service;
 
-import com.bp.scaffolding.model.restful.Article;
+import com.bp.scaffolding.domain.model.Article;
 
 /**
  * @description: 文章服务类
@@ -8,8 +8,12 @@ import com.bp.scaffolding.model.restful.Article;
  * @date: 2022/3/2 3:09 PM
  */
 public interface ArticleService {
+
     /**
-     * 文章保存
+     * 保存文章信息
+     *
+     * @param article 文章
+     * @return 保存结果
      */
     String saveArticle(Article article);
 }

@@ -1,4 +1,4 @@
-package com.bp.scaffolding.model.restful;
+package com.bp.scaffolding.domain.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

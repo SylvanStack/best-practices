@@ -1,7 +1,8 @@
 package com.bp.scaffolding.api.restful;
 
-import com.bp.scaffolding.model.restful.Article;
-import com.bp.scaffolding.service.restful.ArticleService;
+import com.bp.scaffolding.api.RestfulExampleController;
+import com.bp.scaffolding.domain.model.Article;
+import com.bp.scaffolding.service.ArticleService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;

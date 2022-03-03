@@ -1,14 +1,14 @@
-package com.bp.scaffolding.api.user;
+package com.bp.scaffolding.api;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @description: 用户
+ * @description: 红包
  * @author: hansiyuan
- * @date: 2022/2/28 6:25 PM
+ * @date: 2022/2/28 6:24 PM
  */
 @RestController
-@RequestMapping("/api/user")
-public class UserController {
+@RequestMapping("/api/packet")
+public class PacketController {
 }

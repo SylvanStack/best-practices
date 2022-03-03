@@ -1,4 +1,4 @@
-package com.bp.scaffolding.model.base;
+package com.bp.scaffolding.domain.base;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,19 +13,21 @@ import lombok.Data;
 @ApiModel(value = "通用响应数据结构类")
 public class AjaxResponse {
 
-    @ApiModelProperty(value="请求是否处理成功")
-    private boolean isok;  //请求是否处理成功
-    @ApiModelProperty(value="请求响应状态码",example="200、400、500")
-    private int code; //请求响应状态码（200、400、500）
-    @ApiModelProperty(value="请求结果描述信息")
-    private String message;  //请求结果描述信息
-    @ApiModelProperty(value="请求结果数据")
-    private Object data; //请求结果数据（通常用于查询操作）
+    @ApiModelProperty(value = "请求是否处理成功")
+    private boolean isok;
+    @ApiModelProperty(value = "请求响应状态码", example = "200、400、500")
+    private int code;
+    @ApiModelProperty(value = "请求结果描述信息")
+    private String message;
+    @ApiModelProperty(value = "请求结果数据")
+    private Object data;
 
     private AjaxResponse() {
     }
 
-    //请求成功的响应，不带查询数据（用于删除、修改、新增接口）
+    /**
+     * 请求成功的响应，不带查询数据（用于删除、修改、新增接口）
+     */
     public static AjaxResponse success() {
         AjaxResponse ajaxResponse = new AjaxResponse();
         ajaxResponse.setIsok(true);
@@ -34,7 +36,9 @@ public class AjaxResponse {
         return ajaxResponse;
     }
 
-    //请求成功的响应，带有查询数据（用于数据查询接口）
+    /**
+     * 请求成功的响应，带有查询数据（用于数据查询接口）
+     */
     public static AjaxResponse success(Object obj) {
         AjaxResponse ajaxResponse = new AjaxResponse();
         ajaxResponse.setIsok(true);
@@ -44,7 +48,9 @@ public class AjaxResponse {
         return ajaxResponse;
     }
 
-    //请求成功的响应，带有查询数据（用于数据查询接口）
+    /**
+     * 请求成功的响应，带有查询数据（用于数据查询接口）
+     */
     public static AjaxResponse success(Object obj, String message) {
         AjaxResponse ajaxResponse = new AjaxResponse();
         ajaxResponse.setIsok(true);

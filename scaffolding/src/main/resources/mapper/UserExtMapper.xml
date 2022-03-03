@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bp.scaffolding.mapper.UserExtMapper">
+
+    <resultMap id="BaseResultMap" type="com.bp.scaffolding.domain.model.User">
+        <result column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+    </resultMap>
+
+    <select id="queryUserById" parameterType="com.bp.scaffolding.domain.dto.UserRequestDTO"
+            resultMap="BaseResultMap">
+        select *
+        from user
+        where id = #{id}
+    </select>
+</mapper>

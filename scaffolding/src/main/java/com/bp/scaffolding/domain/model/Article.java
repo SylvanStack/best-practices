@@ -1,4 +1,4 @@
-package com.bp.scaffolding.model.restful;
+package com.bp.scaffolding.domain.model;
 
 import com.fasterxml.jackson.annotation.*;
 import io.swagger.annotations.ApiModel;

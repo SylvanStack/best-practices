@@ -1,8 +1,8 @@
-package com.bp.scaffolding.api.restful;
+package com.bp.scaffolding.api;
 
-import com.bp.scaffolding.model.base.AjaxResponse;
-import com.bp.scaffolding.model.restful.Article;
-import com.bp.scaffolding.service.restful.ArticleService;
+import com.bp.scaffolding.domain.base.AjaxResponse;
+import com.bp.scaffolding.domain.model.Article;
+import com.bp.scaffolding.service.ArticleService;
 import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -73,6 +73,7 @@ public class RestfulExampleController {
         if (article.getId() == null) {
             //article.id是必传参数，因为通常根据id去修改数据
             //TODO 抛出一个自定义的异常
+            log.error("error");
         }
         log.info("updateArticle:" + article);
         return AjaxResponse.success();

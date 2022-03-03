@@ -15,6 +15,7 @@
     <modules>
         <module>core</module>
         <module>common</module>
+        <module>scaffolding</module>
     </modules>
 
     <properties>
@@ -32,6 +33,7 @@
         <knife4j.version>3.0.2</knife4j.version>
         <mybatis.plus.version>3.3.2</mybatis.plus.version>
         <velocity.version>2.2</velocity.version>
+        <screw.version>1.0.5</screw.version>
     </properties>
 
     <dependencyManagement>
@@ -42,6 +44,11 @@
                 <version>${springboot.parent.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>cn.smallbun.screw</groupId>
+                <artifactId>screw-core</artifactId>
+                <version>${screw.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.velocity</groupId>

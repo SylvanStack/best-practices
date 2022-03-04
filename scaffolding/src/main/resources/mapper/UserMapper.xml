@@ -3,7 +3,7 @@
 <mapper namespace="com.bp.scaffolding.mapper.UserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.bp.scaffolding.domain.model.User">
+    <resultMap id="BaseResultMap" type="com.bp.scaffolding.common.model.User">
         <id column="id" property="id" />
         <result column="name" property="name" />
     </resultMap>

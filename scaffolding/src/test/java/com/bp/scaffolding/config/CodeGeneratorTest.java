@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
  */
 public class CodeGeneratorTest {
     @Test
-    public void generatorCode(String[] args) {
+    public void generatorCode() {
         //1、全局配置
         GlobalConfig config = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");

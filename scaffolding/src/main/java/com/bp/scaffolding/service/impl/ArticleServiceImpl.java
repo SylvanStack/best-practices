@@ -1,6 +1,6 @@
 package com.bp.scaffolding.service.impl;
 
-import com.bp.scaffolding.domain.model.Article;
+import com.bp.scaffolding.common.model.Article;
 import com.bp.scaffolding.service.ArticleService;
 import org.springframework.stereotype.Service;
 

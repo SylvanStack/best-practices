@@ -1,7 +1,7 @@
 package com.bp.scaffolding.api;
 
-import com.bp.scaffolding.domain.base.AjaxResponse;
-import com.bp.scaffolding.domain.model.Article;
+import com.bp.scaffolding.common.base.ResponseDTO;
+import com.bp.scaffolding.common.model.Article;
 import com.bp.scaffolding.service.ArticleService;
 import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
@@ -32,7 +32,7 @@ public class RestfulExampleController {
             @ApiImplicitParam(name = "id", value = "文章Id", required = true, dataType = "Long"),
     })
     @GetMapping("/articles/{id}")
-    public AjaxResponse getArticle(@PathVariable("id") Long id) {
+    public ResponseDTO getArticle(@PathVariable("id") Long id) {
         //使用lombok提供的builder构建对象
         Article article = Article.builder()
                 .id(id)
@@ -42,7 +42,7 @@ public class RestfulExampleController {
                 .title("111").build();
 
         log.info("article:" + article);
-        return AjaxResponse.success(article);
+        return ResponseDTO.success(article);
     }
 
 
@@ -54,11 +54,11 @@ public class RestfulExampleController {
             @ApiImplicitParam(name = "Article", value = "文章", required = true, dataType = "JSON"),
     })
     @PostMapping("/articles")
-    public AjaxResponse saveArticle(@RequestBody Article article,
-                                    @RequestHeader String header) {
+    public ResponseDTO saveArticle(@RequestBody Article article,
+                                   @RequestHeader String header) {
         log.info("saveArticle:" + article);
         String result = articleService.saveArticle(article);
-        return AjaxResponse.success(result);
+        return ResponseDTO.success(result);
     }
 
     /**
@@ -69,14 +69,14 @@ public class RestfulExampleController {
             @ApiImplicitParam(name = "Article", value = "文章", required = true, dataType = "JSON"),
     })
     @PutMapping("/articles")
-    public AjaxResponse updateArticle(@RequestBody Article article) {
+    public ResponseDTO updateArticle(@RequestBody Article article) {
         if (article.getId() == null) {
             //article.id是必传参数，因为通常根据id去修改数据
             //TODO 抛出一个自定义的异常
             log.error("error");
         }
         log.info("updateArticle:" + article);
-        return AjaxResponse.success();
+        return ResponseDTO.success();
     }
 
     /**
@@ -87,9 +87,9 @@ public class RestfulExampleController {
             @ApiImplicitParam(name = "id", value = "文章Id", required = true, dataType = "Long"),
     })
     @DeleteMapping("/articles/{id}")
-    public AjaxResponse deleteArticle(@PathVariable("id") Long id) {
+    public ResponseDTO deleteArticle(@PathVariable("id") Long id) {
         log.info("deleteArticle:" + id);
-        return AjaxResponse.success();
+        return ResponseDTO.success();
     }
 
 }

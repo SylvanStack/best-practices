@@ -1,8 +1,8 @@
 package com.bp.scaffolding.api;
 
-import com.bp.scaffolding.domain.base.AjaxResponse;
-import com.bp.scaffolding.domain.dto.UserDTO;
-import com.bp.scaffolding.domain.dto.UserRequestDTO;
+import com.bp.scaffolding.common.base.ResponseDTO;
+import com.bp.scaffolding.common.dto.UserDTO;
+import com.bp.scaffolding.common.dto.UserRequestDTO;
 import com.bp.scaffolding.service.UserService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -32,8 +32,8 @@ public class UserController {
             @ApiImplicitParam(name = "UserRequestDTO", value = "用户请求DTO", required = true, dataType = "Object"),
     })
     @GetMapping("/getUserById/1.0")
-    public AjaxResponse getUserById(UserRequestDTO userRequestDTO) {
+    public ResponseDTO getUserById(UserRequestDTO userRequestDTO) {
         UserDTO userDTO = userService.getUserById(userRequestDTO);
-        return AjaxResponse.success(userDTO);
+        return ResponseDTO.success(userDTO);
     }
 }

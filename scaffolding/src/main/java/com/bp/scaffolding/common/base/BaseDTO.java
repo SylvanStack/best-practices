@@ -1,4 +1,4 @@
-package com.bp.scaffolding.domain.base;
+package com.bp.scaffolding.common.base;
 
 import lombok.Data;
 

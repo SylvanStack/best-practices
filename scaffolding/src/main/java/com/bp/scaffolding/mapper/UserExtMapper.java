@@ -1,7 +1,7 @@
 package com.bp.scaffolding.mapper;
 
-import com.bp.scaffolding.domain.dto.UserRequestDTO;
-import com.bp.scaffolding.domain.model.User;
+import com.bp.scaffolding.common.dto.UserRequestDTO;
+import com.bp.scaffolding.common.model.User;
 
 /**
  * @description: 用户扩展Mapper

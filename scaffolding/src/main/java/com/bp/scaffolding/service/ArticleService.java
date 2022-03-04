@@ -1,6 +1,6 @@
 package com.bp.scaffolding.service;
 
-import com.bp.scaffolding.domain.model.Article;
+import com.bp.scaffolding.common.model.Article;
 
 /**
  * @description: 文章服务类

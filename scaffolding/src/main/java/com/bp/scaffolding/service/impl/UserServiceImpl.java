@@ -1,8 +1,8 @@
 package com.bp.scaffolding.service.impl;
 
-import com.bp.scaffolding.domain.dto.UserDTO;
-import com.bp.scaffolding.domain.dto.UserRequestDTO;
-import com.bp.scaffolding.domain.model.User;
+import com.bp.scaffolding.common.dto.UserDTO;
+import com.bp.scaffolding.common.dto.UserRequestDTO;
+import com.bp.scaffolding.common.model.User;
 import com.bp.scaffolding.mapper.UserExtMapper;
 import com.bp.scaffolding.mapper.UserMapper;
 import com.bp.scaffolding.service.UserService;

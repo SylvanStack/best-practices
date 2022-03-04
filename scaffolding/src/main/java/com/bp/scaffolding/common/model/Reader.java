@@ -1,4 +1,4 @@
-package com.bp.scaffolding.domain.model;
+package com.bp.scaffolding.common.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

@@ -34,6 +34,7 @@
         <velocity.version>2.2</velocity.version>
         <screw.version>1.0.5</screw.version>
         <jasypt.version>1.18</jasypt.version>
+        <validator.version>6.1.0.Final</validator.version>
     </properties>
 
     <dependencyManagement>
@@ -44,6 +45,11 @@
                 <version>${springboot.parent.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate.validator</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${validator.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.ulisesbocchio</groupId>

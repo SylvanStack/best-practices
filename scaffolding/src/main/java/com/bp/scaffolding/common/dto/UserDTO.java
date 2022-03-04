@@ -1,6 +1,6 @@
-package com.bp.scaffolding.domain.dto;
+package com.bp.scaffolding.common.dto;
 
-import com.bp.scaffolding.domain.base.BaseDTO;
+import com.bp.scaffolding.common.base.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

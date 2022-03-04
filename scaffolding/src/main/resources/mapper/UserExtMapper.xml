@@ -2,12 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bp.scaffolding.mapper.UserExtMapper">
 
-    <resultMap id="BaseResultMap" type="com.bp.scaffolding.domain.model.User">
+    <resultMap id="BaseResultMap" type="com.bp.scaffolding.common.model.User">
         <result column="id" jdbcType="BIGINT" property="id"/>
         <result column="name" jdbcType="VARCHAR" property="name"/>
     </resultMap>
 
-    <select id="queryUserById" parameterType="com.bp.scaffolding.domain.dto.UserRequestDTO"
+    <select id="queryUserById" parameterType="com.bp.scaffolding.common.dto.UserRequestDTO"
             resultMap="BaseResultMap">
         select *
         from user

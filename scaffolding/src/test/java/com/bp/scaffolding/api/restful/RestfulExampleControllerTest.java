@@ -1,7 +1,7 @@
 package com.bp.scaffolding.api.restful;
 
 import com.bp.scaffolding.api.RestfulExampleController;
-import com.bp.scaffolding.domain.model.Article;
+import com.bp.scaffolding.common.model.Article;
 import com.bp.scaffolding.service.ArticleService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;

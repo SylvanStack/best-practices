@@ -7,14 +7,16 @@ import com.baomidou.mybatisplus.generator.config.GlobalConfig;
 import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
+import org.junit.jupiter.api.Test;
 
 /**
  * @description: 代码生成
  * @author: hansiyuan
  * @date: 2022/3/2 6:59 PM
  */
-public class CodeGenerator {
-    public static void main(String[] args) {
+public class CodeGeneratorTest {
+    @Test
+    public void generatorCode(String[] args) {
         //1、全局配置
         GlobalConfig config = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");

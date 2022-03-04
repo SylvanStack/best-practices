@@ -24,7 +24,6 @@
         <springboot.parent.version>2.2.2.RELEASE</springboot.parent.version>
         <httpclient.version>4.5.13</httpclient.version>
         <guava.version>31.0.1-jre</guava.version>
-        <screw.core.version>1.0.5</screw.core.version>
         <lombok.version>1.18.22</lombok.version>
         <easyexcel.version>2.1.6</easyexcel.version>
         <fastjson.version>1.2.70</fastjson.version>
@@ -34,6 +33,7 @@
         <mybatis.plus.version>3.3.2</mybatis.plus.version>
         <velocity.version>2.2</velocity.version>
         <screw.version>1.0.5</screw.version>
+        <jasypt.version>1.18</jasypt.version>
     </properties>
 
     <dependencyManagement>
@@ -44,6 +44,11 @@
                 <version>${springboot.parent.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>${jasypt.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.smallbun.screw</groupId>
@@ -99,11 +104,6 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.smallbun.screw</groupId>
-                <artifactId>screw-core</artifactId>
-                <version>${screw.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>

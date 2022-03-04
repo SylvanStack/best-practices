@@ -8,6 +8,7 @@ import cn.smallbun.screw.core.execute.DocumentationExecute;
 import cn.smallbun.screw.core.process.ProcessConfig;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import org.junit.jupiter.api.Test;
 
 import javax.sql.DataSource;
 import java.util.ArrayList;
@@ -17,8 +18,9 @@ import java.util.ArrayList;
  * @author: hansiyuan
  * @date: 2022/3/3 11:32 AM
  */
-public class ScrewDoc {
-    public static void main(String[] args) {
+public class ScrewDocTest {
+    @Test
+    public  void generateDoc() {
         //数据源
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setDriverClassName("com.mysql.cj.jdbc.Driver");

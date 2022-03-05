@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.LongAdder;
 
 /**
- * @description: GC日志分析程序
+ * @description: GC日志分析程序（GC衡量指标：吞吐量、停顿时间、垃圾回收频率）
  * @author: hansiyuan
  * @date: 2022/3/3 11:00 AM
  */
@@ -37,7 +37,7 @@ public class GCLogAnalysis {
     }
 
     /**
-     * 生成对象
+     * 生成对象（0-10w大小的整型数组、字节数组、double数组、字符串数组）
      */
     private static Object generateGarbage(int max) {
         int randomSize = random.nextInt(max);

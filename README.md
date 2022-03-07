@@ -9,10 +9,6 @@
     - advance(包含JVM、多线程、NIO)
     - algo(算法+数据结构)
     - business(业务相关)
-    - controller
-    - jdk8(jdk8新特性)
-    - sql(sql相关)
-    - test(测试相关、性能测试)
   - scaffolding（SpringBoot 开发脚手架）
   - common
 ## core

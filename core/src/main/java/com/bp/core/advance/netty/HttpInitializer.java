@@ -1,29 +1,32 @@
 package com.bp.core.advance.netty;
 
-import io.netty.channel.ChannelHandler;
-import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInitializer;
+import io.netty.channel.ChannelPipeline;
+import io.netty.channel.socket.SocketChannel;
+import io.netty.handler.codec.http.HttpObjectAggregator;
+import io.netty.handler.codec.http.HttpServerCodec;
 import io.netty.handler.ssl.SslContext;
 
 /**
  * @author hansiyuan
  * @date 2022年03月07日 22:16
  */
-public class HttpInitializer implements ChannelHandler {
+public class HttpInitializer extends ChannelInitializer<SocketChannel> {
+    private final SslContext sslCtx;
+
     public HttpInitializer(SslContext sslCtx) {
+        this.sslCtx = sslCtx;
     }
 
-    @Override
-    public void handlerAdded(ChannelHandlerContext channelHandlerContext) throws Exception {
-
-    }
 
     @Override
-    public void handlerRemoved(ChannelHandlerContext channelHandlerContext) throws Exception {
-
-    }
-
-    @Override
-    public void exceptionCaught(ChannelHandlerContext channelHandlerContext, Throwable throwable) throws Exception {
-
+    protected void initChannel(SocketChannel socketChannel) throws Exception {
+        ChannelPipeline channelPipeline = socketChannel.pipeline();
+        if (sslCtx != null) {
+            channelPipeline.addLast(sslCtx.newHandler(socketChannel.alloc()));
+        }
+        channelPipeline.addLast(new HttpServerCodec());
+        channelPipeline.addLast(new HttpObjectAggregator(1024*1024));
+        channelPipeline.addLast(new HttpHandler());
     }
 }

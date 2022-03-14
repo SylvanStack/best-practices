@@ -1,4 +1,4 @@
-package com.bp.core.advance.netty;
+package com.bp.core.advance.nio.netty;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;

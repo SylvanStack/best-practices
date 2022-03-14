@@ -1,4 +1,4 @@
-package com.bp.core.advance.netty;
+package com.bp.core.advance.nio.netty;
 
 /**
  * @author hansiyuan

@@ -16,6 +16,7 @@
         <module>core</module>
         <module>common</module>
         <module>scaffolding</module>
+        <module>gateway</module>
     </modules>
 
     <properties>
@@ -23,6 +24,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springboot.parent.version>2.2.2.RELEASE</springboot.parent.version>
         <httpclient.version>4.5.13</httpclient.version>
+        <sync.httpclient.version>4.1.4</sync.httpclient.version>
         <guava.version>31.0.1-jre</guava.version>
         <lombok.version>1.18.22</lombok.version>
         <easyexcel.version>2.1.6</easyexcel.version>
@@ -126,6 +128,16 @@
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
                 <version>${httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpasyncclient</artifactId>
+                <version>${sync.httpclient.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

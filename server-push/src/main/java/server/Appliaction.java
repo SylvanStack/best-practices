@@ -1,6 +1,5 @@
 package server;
 
-import server.codec.MetricsHandler;
 import server.codec.ServerFrameDecoder;
 import server.codec.ServerFrameEncoder;
 import server.codec.ServerProtocolDecoder;

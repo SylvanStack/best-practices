@@ -16,9 +16,10 @@
         <module>core</module>
         <module>common</module>
         <module>scaffolding</module>
-        <module>gateway</module>
-        <module>server-push</module>
         <module>db-bulider</module>
+        <module>spring-example</module>
+        <module>springboot-example</module>
+        <module>netty-example</module>
     </modules>
 
     <properties>

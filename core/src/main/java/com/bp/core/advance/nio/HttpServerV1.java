@@ -32,6 +32,7 @@ public class HttpServerV1 {
             String body = "hello,nio";
             printWriter.println("Content-Length: " + body.getBytes().length);
             printWriter.println();
+            System.out.println(body);
             printWriter.write(body);
             printWriter.close();
             socket.close();

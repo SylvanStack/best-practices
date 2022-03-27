@@ -33,6 +33,7 @@ public class HttpServerV2 {
             printWriter.println("Content-Type:text/html;charset=utf-8");
             String body = "hello,nio";
             printWriter.println("Content-Length: " + body.getBytes().length);
+            System.out.println(body);
             printWriter.println();
             printWriter.write(body);
             printWriter.close();

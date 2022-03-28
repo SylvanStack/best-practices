@@ -17,9 +17,10 @@
         <module>common</module>
         <module>scaffolding</module>
         <module>db-bulider</module>
-        <module>spring-example</module>
-        <module>springboot-example</module>
+        <!--        <module>spring-example</module>-->
+        <!--        <module>springboot-example</module>-->
         <module>netty-example</module>
+        <module>dubbo-frame-example</module>
     </modules>
 
     <properties>
@@ -43,6 +44,9 @@
         <netty.version>4.1.50.Final</netty.version>
         <gson.version>2.8.9</gson.version>
         <metrics.version>4.1.1</metrics.version>
+        <dubbo.version>2.7.8</dubbo.version>
+        <nacos.version>1.3.2</nacos.version>
+        <yuan.sdk.version>1.0.0-SNAPSHOT</yuan.sdk.version>
     </properties>
 
     <dependencyManagement>
@@ -53,6 +57,21 @@
                 <version>${springboot.parent.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bp</groupId>
+                <artifactId>dubbo-demo-sdk</artifactId>
+                <version>${yuan.sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${nacos.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.dropwizard.metrics</groupId>

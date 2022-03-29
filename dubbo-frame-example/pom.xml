@@ -4,7 +4,7 @@
     <!--region 信息-->
     <parent>
         <artifactId>best-practices</artifactId>
-        <groupId>com.bp</groupId>
+        <groupId>com.yuanstack.bp</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>

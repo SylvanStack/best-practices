@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <!--region 信息-->
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.bp</groupId>
+    <groupId>com.yuanstack.bp</groupId>
     <artifactId>best-practices</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>best-practices</name>
@@ -64,7 +64,7 @@
                 <version>${dubbo.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.bp</groupId>
+                <groupId>com.yuanstack.bp</groupId>
                 <artifactId>dubbo-demo-sdk</artifactId>
                 <version>${yuan.sdk.version}</version>
             </dependency>

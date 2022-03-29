@@ -6,7 +6,7 @@
 http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
     <!-- SSO -->
-    <dubbo:service interface="com.bp.dubbo.demo.service.ExampleService"
+    <dubbo:service interface="com.yuanstack.bp.dubbo.demo.service.ExampleService"
                    ref="exampleServiceImpl"
                    group="dubbo_demo"
                    version="1.0.0" timeout="3000"/>

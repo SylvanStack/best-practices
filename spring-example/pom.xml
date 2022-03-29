@@ -10,10 +10,25 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>spring-source</module>
+        <module>spring-source-ioc</module>
+        <module>spring-source-introduction</module>
+        <module>spring-source-aop</module>
+        <module>spring-source-web</module>
+        <module>spring-source-dao</module>
     </modules>
 
     <artifactId>spring-example</artifactId>
-
-
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.2.8.RELEASE</version>
+        </dependency>
+    </dependencies>
 </project>

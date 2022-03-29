@@ -1,4 +1,4 @@
-package com.yuanstack.bp.core.design.singleton;
+package com.yuanstack.bp.core.design.create.singleton;
 
 
 import java.io.File;

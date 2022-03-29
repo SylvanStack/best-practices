@@ -1,4 +1,4 @@
-package com.yuanstack.bp.core.design.strategy;
+package com.yuanstack.bp.core.design.behavior.strategy;
 
 import java.util.HashMap;
 import java.util.Map;

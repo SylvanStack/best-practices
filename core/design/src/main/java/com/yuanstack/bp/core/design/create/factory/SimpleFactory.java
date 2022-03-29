@@ -1,4 +1,4 @@
-package com.yuanstack.bp.core.design.factory;
+package com.yuanstack.bp.core.design.create.factory;
 
 /**
  * @author hansiyuan

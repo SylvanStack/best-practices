@@ -2,6 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>algo</module>
+        <module>design</module>
+        <module>business</module>
+        <module>advance</module>
+    </modules>
     <parent>
         <artifactId>best-practices</artifactId>
         <groupId>com.yuanstack.bp</groupId>
@@ -12,7 +18,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <name>core</name>
     <description>core</description>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <properties>
         <java.version>1.8</java.version>

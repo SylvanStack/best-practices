@@ -12,7 +12,7 @@ public class GuavaRegNotificationObserver {
     private NotificationService notificationService = new NotificationService();
 
     @Subscribe
-    public void handleRegSuccess(long userId) {
+    public void handleRegSuccess(Long userId) {
         notificationService.sendInboxMessage(userId, "...");
     }
 }

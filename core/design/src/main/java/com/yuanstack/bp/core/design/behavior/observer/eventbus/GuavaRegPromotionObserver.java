@@ -13,7 +13,7 @@ public class GuavaRegPromotionObserver{
     private PromotionService promotionService = new PromotionService();
 
     @Subscribe
-    public void handleRegSuccess(long userId){
+    public void handleRegSuccess(Long userId){
         promotionService.issueNewUserExperienceCash(userId);
     }
 }

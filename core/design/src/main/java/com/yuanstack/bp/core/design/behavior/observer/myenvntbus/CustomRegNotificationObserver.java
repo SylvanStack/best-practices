@@ -12,7 +12,7 @@ public class CustomRegNotificationObserver {
     private NotificationService notificationService = new NotificationService();
 
     @CustomSubscribe
-    public void handleRegSuccess(long userId){
+    public void handleRegSuccess(Long userId){
         notificationService.sendInboxMessage(userId, "...");
     }
 }

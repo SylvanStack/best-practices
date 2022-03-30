@@ -13,7 +13,7 @@ public class CustomRegPromotionObserver {
     private PromotionService promotionService = new PromotionService();
 
     @CustomSubscribe
-    public void handleRegSuccess(long userId){
+    public void handleRegSuccess(Long userId){
         promotionService.issueNewUserExperienceCash(userId);
     }
 }

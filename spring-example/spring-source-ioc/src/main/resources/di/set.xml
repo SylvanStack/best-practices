@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="diPerson" class="com.yuanstack.bp.spring.source.ioc.annotation.di.common.DiPerson">
+        <property name="name" value="test-person-byset"/>
+        <property name="age" value="18"/>
+    </bean>
+
+    <bean id="diCat" class="com.yuanstack.bp.spring.source.ioc.annotation.di.common.DiCat">
+        <property name="name" value="test-cat"/>
+        <property name="master" ref="diPerson"/>
+    </bean>
+
+</beans>

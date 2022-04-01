@@ -1,8 +1,10 @@
-package com.yuanstack.bp.core.design.create.singleton;
+package com.yuanstack.bp.core.design.create.singleton.unique;
 
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
+ * 枚举
+ *
  * @author hansiyuan
  * @date 2022年03月14日 23:16
  */

@@ -5,7 +5,7 @@ package com.yuanstack.bp.core.algo.array;
  * @author: hansiyuan
  * @date: 2021/9/29 3:31 下午
  */
-public class MyArrayList {
+public class CustomArrayList {
 
     /**
      * 容器
@@ -22,11 +22,11 @@ public class MyArrayList {
      */
     private int length = 8;
 
-    public MyArrayList() {
+    public CustomArrayList() {
         this.data = new int[length];
     }
 
-    public MyArrayList(int capacity) {
+    public CustomArrayList(int capacity) {
         this.data = new int[length];
         this.length = capacity;
     }
@@ -93,7 +93,7 @@ public class MyArrayList {
          *   数据特性：相同、连续存储、下标索引
          *   实现增删改查
          */
-        MyArrayList myArrayList = new MyArrayList();
+        CustomArrayList myArrayList = new CustomArrayList();
         myArrayList.add(1);
         myArrayList.add(2);
         myArrayList.add(3);

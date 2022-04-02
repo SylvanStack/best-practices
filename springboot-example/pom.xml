@@ -12,6 +12,7 @@
 
     <modules>
         <module>springboot-helloworld</module>
+        <module>db-router-spring-boot-starter</module>
     </modules>
 
     <artifactId>springboot-example</artifactId>

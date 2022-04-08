@@ -1,4 +1,4 @@
-package com.yuanstack.bp.core.algo.linked;
+package com.yuanstack.bp.core.structure.linked;
 
 /**
  * @description: 链表实现LRU缓存

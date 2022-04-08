@@ -1,4 +1,8 @@
-package com.yuanstack.bp.core.algo.linked;
+package com.yuanstack.bp.core.structure.linked;
+
+import org.w3c.dom.Node;
+
+import java.util.List;
 
 /**
  * @description: 链表相关算法
@@ -11,6 +15,14 @@ package com.yuanstack.bp.core.algo.linked;
  * @date: 2022/4/1 2:41 PM
  */
 public class LinkedListAlgo {
+
+    public static void main(String[] args) {
+        Node node = new Node(1, new Node(2, new Node(3, new Node(4, new Node(5, null)))));
+        printAll(node);
+        Node node1 = reverseBetween(node,2,4);
+        printAll(node1);
+    }
+
     /**
      * 单链表反转
      *
@@ -26,6 +38,24 @@ public class LinkedListAlgo {
             curr = next;
         }
         return pre;
+    }
+
+    public static Node reverseBetween(Node head, int m, int n) {
+        Node res = new Node(-1, null);
+        res.next = head;
+        Node pre = res;
+        Node cur = head;
+        for (int i = 1; i < m; i++) {
+            pre = cur;
+            cur = cur.next;
+        }
+        for (int i = m; i < n; i++) {
+            Node temp = cur.next;
+            cur.next = temp.next;
+            temp.next = pre.next;
+            pre.next = temp;
+        }
+        return res.next;
     }
 
     /**
@@ -201,6 +231,7 @@ public class LinkedListAlgo {
             return data;
         }
     }
+
     public static class ListNode {
         int val;
         ListNode next;

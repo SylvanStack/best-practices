@@ -1,4 +1,4 @@
-package com.yuanstack.bp.core.algo.array;
+package com.yuanstack.bp.core.structure.array;
 
 import java.util.HashMap;
 import java.util.Map;

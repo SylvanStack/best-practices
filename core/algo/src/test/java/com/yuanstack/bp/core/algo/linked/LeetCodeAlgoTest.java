@@ -1,5 +1,7 @@
 package com.yuanstack.bp.core.algo.linked;
 
+import com.yuanstack.bp.core.structure.linked.LinkedListAlgo;
+import com.yuanstack.bp.core.structure.linked.ListNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

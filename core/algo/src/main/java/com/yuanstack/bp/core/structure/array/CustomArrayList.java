@@ -1,4 +1,4 @@
-package com.yuanstack.bp.core.algo.array;
+package com.yuanstack.bp.core.structure.array;
 
 /**
  * @description: 仿ArrayList

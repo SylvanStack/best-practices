@@ -1,4 +1,4 @@
-package com.yuanstack.bp.common.utils.httpclient;
+package com.yuanstack.bp.common.httpclient;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HeaderElement;
@@ -13,7 +13,7 @@ import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicHeaderElementIterator;
 import org.apache.http.protocol.HTTP;
 
-import static com.yuanstack.bp.common.utils.httpclient.HttpClientConstants.*;
+import static com.yuanstack.bp.common.httpclient.HttpClientConstants.*;
 
 /**
  * @description: HttpClientFactory

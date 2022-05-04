@@ -1,4 +1,4 @@
-package com.yuanstack.bp.common.utils.httpclient;
+package com.yuanstack.bp.common.httpclient;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;

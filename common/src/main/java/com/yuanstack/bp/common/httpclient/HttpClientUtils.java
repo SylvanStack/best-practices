@@ -1,4 +1,4 @@
-package com.yuanstack.bp.common.utils.httpclient;
+package com.yuanstack.bp.common.httpclient;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.MapUtils;
@@ -22,9 +22,6 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
-
-import static com.yuanstack.bp.common.utils.httpclient.HttpClientFactory.getRequestConfig;
-import static com.yuanstack.bp.common.utils.httpclient.HttpClientFactory.httpClient;
 
 /**
  * @description: http请求工具类
@@ -54,12 +51,12 @@ public class HttpClientUtils {
                 tokenMap.keySet().forEach(key -> httpGet.setHeader(key, tokenMap.get(key)));
             }
             // 设置配置请求参数
-            RequestConfig requestConfig = getRequestConfig(connectTimeout, requestTimeout, socketTimeout);
+            RequestConfig requestConfig = HttpClientFactory.getRequestConfig(connectTimeout, requestTimeout, socketTimeout);
             // 为httpGet实例设置配置
             httpGet.setConfig(requestConfig);
 
             // 执行get请求得到返回对象
-            response = httpClient.execute(httpGet);
+            response = HttpClientFactory.httpClient.execute(httpGet);
             return handlerResponse(response);
         } catch (IOException e) {
             log.error("调用HttpClientUtils.doGet()异常", e);
@@ -86,7 +83,7 @@ public class HttpClientUtils {
                 tokenMap.keySet().forEach(key -> httpGet.setHeader(key, tokenMap.get(key)));
             }
             // 设置配置请求参数
-            RequestConfig requestConfig = getRequestConfig(connectTimeout, requestTimeout, socketTimeout);
+            RequestConfig requestConfig = HttpClientFactory.getRequestConfig(connectTimeout, requestTimeout, socketTimeout);
             // 为httpGet实例设置配置
             httpGet.setConfig(requestConfig);
             //JSON BODY 方式
@@ -97,7 +94,7 @@ public class HttpClientUtils {
                 httpGet.setEntity(se);
             }
             // 执行get请求得到返回对象
-            response = httpClient.execute(httpGet);
+            response = HttpClientFactory.httpClient.execute(httpGet);
             return handlerResponse(response);
         } catch (IOException e) {
             log.error("调用HttpClientUtils.doGetWithEntity()异常", e);
@@ -125,7 +122,7 @@ public class HttpClientUtils {
         // 创建httpPost远程连接实例
         HttpPost httpPost = new HttpPost(url);
         // 配置请求参数实例
-        RequestConfig requestConfig = getRequestConfig(connectTimeout, requestTimeout, socketTimeout);
+        RequestConfig requestConfig = HttpClientFactory.getRequestConfig(connectTimeout, requestTimeout, socketTimeout);
         // 为httpPost实例设置配置
         httpPost.setConfig(requestConfig);
         // 设置请求头
@@ -166,7 +163,7 @@ public class HttpClientUtils {
                 }
             }
 
-            httpResponse = httpClient.execute(httpPost);
+            httpResponse = HttpClientFactory.httpClient.execute(httpPost);
             return handlerResponse(httpResponse);
         } catch (IOException e) {
             log.error("HttpClientUtils.doPost异常", e);
@@ -190,7 +187,7 @@ public class HttpClientUtils {
         // 创建HttpPatch远程连接实例
         HttpPatch httpPatch = new HttpPatch(url);
         // 配置请求参数实例
-        RequestConfig requestConfig = getRequestConfig(connectTimeout, requestTimeout, socketTimeout);
+        RequestConfig requestConfig = HttpClientFactory.getRequestConfig(connectTimeout, requestTimeout, socketTimeout);
         // 为HttpPatch实例设置配置
         httpPatch.setConfig(requestConfig);
 
@@ -234,7 +231,7 @@ public class HttpClientUtils {
                 }
             }
 
-            httpResponse = httpClient.execute(httpPatch);
+            httpResponse = HttpClientFactory.httpClient.execute(httpPatch);
             return handlerResponse(httpResponse);
         } catch (IOException e) {
             log.error("HttpClientUtils.doPost异常", e);
@@ -264,11 +261,11 @@ public class HttpClientUtils {
             }
 
             // 设置配置请求参数
-            RequestConfig requestConfig = getRequestConfig(null, null, null);
+            RequestConfig requestConfig = HttpClientFactory.getRequestConfig(null, null, null);
             // 为httpDelete实例设置配置
             httpDelete.setConfig(requestConfig);
             // 执行httpDelete请求得到返回对象
-            response = httpClient.execute(httpDelete);
+            response = HttpClientFactory.httpClient.execute(httpDelete);
 
             return handlerResponse(response);
         } catch (IOException e) {
@@ -302,7 +299,7 @@ public class HttpClientUtils {
         // 创建httpPost远程连接实例
         HttpPost httpPost = new HttpPost(url);
         // 配置请求参数实例
-        RequestConfig requestConfig = getRequestConfig(null, null, null);
+        RequestConfig requestConfig = HttpClientFactory.getRequestConfig(null, null, null);
         // 为httpPost实例设置配置
         httpPost.setConfig(requestConfig);
 
@@ -320,7 +317,7 @@ public class HttpClientUtils {
 
             httpPost.setEntity(builder.build());
 
-            httpResponse = httpClient.execute(httpPost);
+            httpResponse = HttpClientFactory.httpClient.execute(httpPost);
             return handlerResponse(httpResponse);
         } catch (ClientProtocolException e) {
             log.error("HttpClientUtils.fileUpload异常", e);

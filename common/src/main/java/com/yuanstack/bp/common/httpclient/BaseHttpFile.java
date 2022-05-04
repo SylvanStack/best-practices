@@ -1,4 +1,4 @@
-package com.yuanstack.bp.common.utils.httpclient;
+package com.yuanstack.bp.common.httpclient;
 
 import lombok.Data;
 
